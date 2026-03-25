@@ -1,0 +1,77 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center;
+  color: white;
+  text-align: center;
+  padding: 100px;
+}
+
+/* SCROLL */
+.scrolling {
+  background: yellow;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling p {
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
