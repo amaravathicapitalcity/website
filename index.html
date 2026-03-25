@@ -27,15 +27,15 @@
 
       <!-- TOURISM DROPDOWN -->
       <li class="dropdown">
-        <a href="#">Tourism ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="devotional.html">Devotional</a></li>
-          <li><a href="historical.html">Historical</a></li>
-          <li><a href="spiritual.html">Spiritual</a></li>
-          <li><a href="nature.html">Nature & Relaxation</a></li>
-          <li><a href="city.html">City Attraction</a></li>
-        </ul>
-      </li>
+  <a href="#" onclick="toggleDropdown(event)">Tourism ▾</a>
+  <ul class="dropdown-menu" id="dropdownMenu">
+    <li><a href="devotional.html" onclick="closeDropdown()">Devotional</a></li>
+    <li><a href="historical.html" onclick="closeDropdown()">Historical</a></li>
+    <li><a href="spiritual.html" onclick="closeDropdown()">Spiritual</a></li>
+    <li><a href="nature.html" onclick="closeDropdown()">Nature & Relaxation</a></li>
+    <li><a href="city.html" onclick="closeDropdown()">City Attraction</a></li>
+  </ul>
+</li>
 
       <li><a href="index.html#contact">Contact</a></li>
 
@@ -150,13 +150,6 @@
 </footer>
 
 <script src="script.js"></script>
-  <!-- SCRIPT FOR LOGO CLICK -->
-<script>
-function goHome() {
-  window.location.href = "index.html";
-}
-</script>
-
 
 </body>
 </html>
