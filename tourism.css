@@ -1,0 +1,128 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  text-align: center;
+}
+/* NAVBAR */
+.navbar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  background: #1f2937; /* solid for tourism page */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-container img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.logo-container span {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  transform: scale(1.2);
+  color: #facc15;
+}
+
+/* TITLE */
+.title {
+  margin: 40px 0;
+  color: #0A1F44;
+}
+
+/* CATEGORY CARDS */
+.tourism-categories {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.tour-card {
+  background: white;
+  padding: 25px;
+  width: 220px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px);
+  background: #facc15;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* MODAL CARDS */
+.modal-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.place-card {
+  width: 180px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+}
