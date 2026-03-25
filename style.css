@@ -18,52 +18,61 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: transparent; /* transparent */
-  position: absolute; /* sit on hero */
+  padding: 0 50px;
+  background: transparent;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
 }
 
-.logo-container span {
-  font-size: 22px;
-  font-weight: bold;
-  color: #0A1F44;
+/* LOGO FIX */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo-container img {
-  height: 40px;
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .logo-container span {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 30px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
-  color: #0A1F44;
+  color: white; /* FIXED */
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.3s ease;
+  display: inline-block; /* IMPORTANT for scale */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-  transform: scale(1.15);
-  color: #2563eb; /* optional highlight */
+  transform: scale(1.2); /* FIXED enlarge */
+  color: #facc15;
 }
 
 /* HERO */
 .hero {
-  height: calc(100vh - 70px); /* full screen minus navbar */
-  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 100vh; /* FULL SCREEN */
+  background: url('images/hero.jpg') center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,17 +80,15 @@ body {
   color: white;
   text-align: center;
   position: relative;
+  padding: 0 20px;
 }
 
-/* Optional dark overlay for better text visibility */
+/* OVERLAY */
 .hero::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0,0,0,0.4);
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
 .hero h2,
@@ -91,7 +98,7 @@ body {
 }
 
 .hero h2 {
-  font-size: 48px;
+  font-size: 52px;
   font-weight: bold;
 }
 
