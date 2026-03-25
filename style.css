@@ -57,19 +57,42 @@ body {
 
 /* HERO */
 .hero {
+  height: calc(100vh - 70px); /* full screen minus navbar */
   background: url('images/hero.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  position: relative;
+}
+
+/* Optional dark overlay for better text visibility */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .hero p {
-  margin-top: 10px;
   font-size: 18px;
+  margin-top: 10px;
 }
 
 /* SCROLLING BAR */
