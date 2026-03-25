@@ -1,8 +1,17 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f9fafb;
-  text-align: center;
+  color: #333;
 }
+
 /* NAVBAR */
 .navbar {
   height: 70px;
@@ -10,7 +19,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background: #1f2937; /* solid for tourism page */
+  background: #1f2937;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -35,10 +44,12 @@ body {
   font-weight: 600;
 }
 
+/* NAV LINKS */
 .nav-links {
   display: flex;
   gap: 30px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -54,75 +65,90 @@ body {
   color: #facc15;
 }
 
-/* TITLE */
-.title {
-  margin: 40px 0;
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #0A1F44;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #facc15;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 32px;
   color: #0A1F44;
 }
 
-/* CATEGORY CARDS */
-.tourism-categories {
+/* CARDS SECTION */
+.cards {
   display: flex;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
-.tour-card {
+/* CARD */
+.card {
+  width: 250px;
   background: white;
-  padding: 25px;
-  width: 220px;
   border-radius: 12px;
-  cursor: pointer;
+  padding: 20px;
+  text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
-  font-weight: 600;
 }
 
-.tour-card:hover {
+.card:hover {
   transform: translateY(-8px);
-  background: #facc15;
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  width: 80%;
-  max-width: 800px;
-  padding: 20px;
-  border-radius: 12px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-/* MODAL CARDS */
-.modal-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  justify-content: center;
-}
-
-.place-card {
-  width: 180px;
-  background: #f4f4f4;
-  padding: 15px;
+/* OPTIONAL IMAGE INSIDE CARD */
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.card h3 {
+  margin-bottom: 5px;
+  color: #0A1F44;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
 }
