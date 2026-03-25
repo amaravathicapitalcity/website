@@ -9,13 +9,18 @@
 
 <!-- NAVBAR -->
 <header>
-  <nav>
-    <h1 class="logo" onclick="goHome()">Amaravathi</h1>
-    <ul>
-      <li><a href="jobs.html">Job Opportunities</a></li>
+  <nav class="navbar">
+    <div class="logo-container" onclick="goHome()">
+      <img src="images/logo.png" alt="logo">
+      <span>Amaravathi</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="jobs.html">Jobs</a></li>
       <li><a href="services.html">Client Services</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#">Events</a></li>
       <li><a href="tourism.html">Tourism</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -23,45 +28,85 @@
 <!-- HERO -->
 <section class="hero">
   <h2>Amaravathi Updates</h2>
-  <p>We provide latest updates, opportunities, and promotions across Amaravathi.</p>
+  <p>Latest updates, opportunities, and promotions in one place.</p>
 </section>
 
 <!-- SCROLLING BAR -->
 <div class="scrolling">
-  <p>🔥 Latest: Govt Jobs | Walk-ins | Business Promotions | Events</p>
+  <div class="scroll-track">
+    <span>🔥 Latest Updates • Govt Jobs • Walk-ins • Promotions • Events • Tourism Updates • </span>
+    <span>🔥 Latest Updates • Govt Jobs • Walk-ins • Promotions • Events • Tourism Updates • </span>
+  </div>
 </div>
 
-<!-- WHATS NEW -->
-<section>
+<!-- WHAT'S NEW -->
+<section class="section">
   <h2>What's New</h2>
   <div class="cards">
     <div class="card">New Job Opening</div>
-    <div class="card">Shop Promotion</div>
+    <div class="card">Business Promotion</div>
     <div class="card">Event Update</div>
   </div>
 </section>
 
 <!-- SERVICES -->
-<section>
+<section class="services">
   <h2>Our Services</h2>
-  <p>We connect businesses, clients, and job seekers in Amaravathi.</p>
+
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="images/jobs.jpg">
+      <h3>Job Updates</h3>
+      <p>Find latest job opportunities across multiple sectors.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/marketing.jpg">
+      <h3>Business Promotions</h3>
+      <p>Promote your business and reach more customers locally.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="images/services.jpg">
+      <h3>Client Services</h3>
+      <p>Connect with trusted service providers in Amaravathi.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ABOUT -->
-<section id="contact">
+<section id="contact" class="about">
   <h2>About Us</h2>
-  <p>We are a local platform sharing updates, opportunities, and services.</p>
 
-  <p>Email: example@mail.com</p>
-  <p>WhatsApp: +91 XXXXXXXX</p>
-  <p>Twitter: @amaravathi</p>
+  <p>
+    Amaravathi Updates is a local digital platform dedicated to connecting people with 
+    the latest opportunities, services, and developments in Amaravathi.
+  </p>
+
+  <p>
+    We provide real-time updates on job opportunities, business promotions, client services, 
+    tourism highlights, and community events. Our goal is to bridge the gap between businesses 
+    and individuals by offering a single trusted platform for information and growth.
+  </p>
+
+  <p>
+    Whether you are a job seeker, business owner, or visitor, we aim to deliver accurate, 
+    timely, and valuable updates that help you make better decisions.
+  </p>
+
+  <div class="contact-details">
+    <p>Email: example@mail.com</p>
+    <p>WhatsApp: +91 XXXXXXXX</p>
+    <p>Twitter: @amaravathi</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Amaravathi</p>
+  <p>© 2026 Amaravathi. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
