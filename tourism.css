@@ -93,10 +93,14 @@ body {
   font-size: 14px;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
+.dropdown-menu {
+  display: none;
 }
 
+/* SHOW WHEN ACTIVE */
+.dropdown-menu.show {
+  display: block;
+}
 .dropdown-menu li:hover {
   background: #facc15;
 }
