@@ -1,11 +1,44 @@
+// GO HOME
 function goHome() {
   window.location.href = "index.html";
 }
 
-// Job search filter
+// ================= NAVBAR DROPDOWN =================
+
+// TOGGLE DROPDOWN
+function toggleDropdown(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  const menu = document.getElementById("dropdownMenu");
+  if (menu) {
+    menu.classList.toggle("show");
+  }
+}
+
+// CLOSE DROPDOWN
+function closeDropdown() {
+  const menu = document.getElementById("dropdownMenu");
+  if (menu) {
+    menu.classList.remove("show");
+  }
+}
+
+// CLOSE WHEN CLICKING ANYWHERE
+window.addEventListener("click", function () {
+  closeDropdown();
+});
+
+
+// ================= JOB SEARCH =================
+
 function searchJobs() {
   let input = document.getElementById("search").value.toLowerCase();
-  let jobs = document.getElementById("jobList").getElementsByTagName("li");
+  let jobList = document.getElementById("jobList");
+
+  if (!jobList) return; // prevents error on other pages
+
+  let jobs = jobList.getElementsByTagName("li");
 
   for (let i = 0; i < jobs.length; i++) {
     let text = jobs[i].innerText.toLowerCase();
@@ -13,7 +46,9 @@ function searchJobs() {
   }
 }
 
-// Show clients
+
+// ================= CLIENT SERVICES =================
+
 function showClients(service) {
   let data = {
     it: ["TCS", "Infosys"],
@@ -22,10 +57,17 @@ function showClients(service) {
   };
 
   let output = "<h3>Clients:</h3><ul>";
-  data[service].forEach(c => {
-    output += "<li>" + c + "</li>";
-  });
+
+  if (data[service]) {
+    data[service].forEach(c => {
+      output += "<li>" + c + "</li>";
+    });
+  }
+
   output += "</ul>";
 
-  document.getElementById("clients").innerHTML = output;
+  const clientsDiv = document.getElementById("clients");
+  if (clientsDiv) {
+    clientsDiv.innerHTML = output;
+  }
 }
