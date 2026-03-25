@@ -11,20 +11,39 @@
 <!-- NAVBAR -->
 <header>
   <nav class="navbar">
+
+    <!-- LOGO -->
     <div class="logo-container" onclick="goHome()">
       <img src="images/logo.jpg" alt="logo">
-      <span>Amaravathi Capital</span>
+      <span>Amaravathi</span>
     </div>
 
+    <!-- NAV LINKS -->
     <ul class="nav-links">
+
       <li><a href="jobs.html">Jobs</a></li>
       <li><a href="services.html">Client Services</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="tourism.html">Tourism</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="events.html">Events</a></li>
+
+      <!-- TOURISM DROPDOWN -->
+      <li class="dropdown">
+        <a href="#">Tourism ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="devotional.html">Devotional</a></li>
+          <li><a href="historical.html">Historical</a></li>
+          <li><a href="spiritual.html">Spiritual</a></li>
+          <li><a href="nature.html">Nature & Relaxation</a></li>
+          <li><a href="city.html">City Attraction</a></li>
+        </ul>
+      </li>
+
+      <li><a href="index.html#contact">Contact</a></li>
+
     </ul>
+
   </nav>
 </header>
+
 
 <!-- HERO -->
 <section class="hero">
@@ -131,6 +150,13 @@
 </footer>
 
 <script src="script.js"></script>
+  <!-- SCRIPT FOR LOGO CLICK -->
+<script>
+function goHome() {
+  window.location.href = "index.html";
+}
+</script>
+
 
 </body>
 </html>
