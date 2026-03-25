@@ -65,54 +65,76 @@ body {
   color: #facc15;
 }
 
-/* DROPDOWN FIX */
+/* ===== DROPDOWN CONTAINER ===== */
 .dropdown {
   position: relative;
 }
 
+/* ===== DROPDOWN MENU ===== */
 .dropdown-menu {
-  display: none;
   position: absolute;
-  top: 40px;
+  top: 55px;
   left: 0;
-  background: white;
-  list-style: none;
+  min-width: 230px;
   padding: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  min-width: 180px;
-  z-index: 100;
+  list-style: none;
+
+  /* PREMIUM LOOK */
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  /* HIDDEN STATE */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.25s ease;
+  z-index: 1000;
 }
 
+/* ===== SHOW DROPDOWN ===== */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ===== ITEMS ===== */
 .dropdown-menu li {
-  padding: 10px 20px;
-  overflow: hidden; /* prevents text cut */
+  width: 100%;
 }
 
+/* ===== LINKS ===== */
 .dropdown-menu li a {
+  display: block;
+  padding: 12px 22px;
+  font-size: 15px;
   color: #0A1F44;
   text-decoration: none;
-  font-size: 14px;
-  display: inline-block; /* REQUIRED for scale */
-  transition: transform 0.2s ease;
-  transform-origin: left; /* expand from left side */
+
+  transition: all 0.2s ease;
 }
 
-/* HOVER EFFECT */
-/*.dropdown-menu li:hover {
-  background: #facc15;
-}*/
-
+/* ===== HOVER EFFECT ===== */
 .dropdown-menu li a:hover {
-  transform: scale(1.08); /* small smooth enlarge */
-}
-.dropdown-menu {
-  display: none;
+  background: #facc15;
+  color: #000;
+
+  /* PREMIUM INTERACTION */
+  transform: scale(1.05);
+  padding-left: 28px;
 }
 
-/* SHOW WHEN ACTIVE */
-.dropdown-menu.show {
-  display: block;
+/* ===== OPTIONAL: ACTIVE CLICK EFFECT ===== */
+.dropdown-menu li a:active {
+  transform: scale(0.98);
+}
+
+/* ===== SMOOTH BORDER SEPARATION ===== */
+.dropdown-menu li:not(:last-child) a {
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 /* PAGE TITLE */
 .page-title {
