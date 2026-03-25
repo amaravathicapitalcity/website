@@ -237,6 +237,19 @@ footer {
   text-decoration: underline;
 }
 
+.contact-section {
+  margin-top: 30px;
+}
+
+.contact-section h3 {
+  margin-bottom: 10px;
+  color: #0A1F44;
+}
+
+.contact-section p {
+  margin-bottom: 15px;
+  color: #555;
+}
 .contact-icons {
   margin-top: 20px;
   display: flex;
