@@ -14,19 +14,23 @@ body {
 
 /* NAVBAR */
 .navbar {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #1f2937;
-  color: white;
+  background: transparent; /* transparent */
+  position: absolute; /* sit on hero */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
+.logo-container span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0A1F44;
 }
 
 .logo-container img {
@@ -45,14 +49,15 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #0A1F44;
   text-decoration: none;
-  font-size: 15px;
-  transition: 0.3s;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #38bdf8;
+  transform: scale(1.15);
+  color: #2563eb; /* optional highlight */
 }
 
 /* HERO */
