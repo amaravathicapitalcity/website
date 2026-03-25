@@ -57,8 +57,12 @@ body {
   display: block;
 }
 
-/* SHOW DROPDOWN */
-.dropdown:hover .dropdown-menu {
+.dropdown-menu {
+  display: none;
+}
+
+/* SHOW WHEN ACTIVE */
+.dropdown-menu.show {
   display: block;
 }
 
