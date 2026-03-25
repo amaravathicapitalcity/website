@@ -27,6 +27,46 @@ body {
   z-index: 10;
 }
 
+/* DROPDOWN FIX */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 180px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #0A1F44;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* HOVER EFFECT */
+.dropdown-menu li:hover {
+  background: #facc15;
+}
+
 /* LOGO FIX */
 .logo-container {
   display: flex;
