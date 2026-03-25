@@ -99,9 +99,9 @@ body {
 }
 
 /* HOVER EFFECT */
-.dropdown-menu li:hover {
+/*.dropdown-menu li:hover {
   background: #facc15;
-}
+}*/
 
 .dropdown-menu li a:hover {
   transform: scale(1.08); /* small smooth enlarge */
