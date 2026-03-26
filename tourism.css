@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* PREVENT HORIZONTAL SCROLL */
+html, body {
+  overflow-x: hidden;
+}
+
 /* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -18,13 +23,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 30px; /* reduced for safety */
   background: #1f2937;
   position: sticky;
   top: 0;
   z-index: 100;
+  max-width: 100%;
 }
 
+/* LOGO */
 .logo-container {
   display: flex;
   align-items: center;
@@ -47,7 +54,7 @@ body {
 /* NAV LINKS */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   list-style: none;
   align-items: center;
 }
@@ -65,12 +72,11 @@ body {
   color: #facc15;
 }
 
-/* ===== DROPDOWN CONTAINER ===== */
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
 
-/* ===== DROPDOWN MENU ===== */
 .dropdown-menu {
   position: absolute;
   top: 55px;
@@ -79,13 +85,11 @@ body {
   padding: 10px 0;
   list-style: none;
 
-  /* PREMIUM LOOK */
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 
-  /* HIDDEN STATE */
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -94,48 +98,40 @@ body {
   z-index: 1000;
 }
 
-/* ===== SHOW DROPDOWN ===== */
 .dropdown-menu.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* ===== ITEMS ===== */
 .dropdown-menu li {
   width: 100%;
 }
 
-/* ===== LINKS ===== */
 .dropdown-menu li a {
   display: block;
   padding: 12px 22px;
   font-size: 15px;
   color: #0A1F44;
   text-decoration: none;
-
   transition: all 0.2s ease;
 }
 
-/* ===== HOVER EFFECT ===== */
 .dropdown-menu li a:hover {
   background: #facc15;
   color: #000;
-
-  /* PREMIUM INTERACTION */
   transform: scale(1.05);
   padding-left: 28px;
 }
 
-/* ===== OPTIONAL: ACTIVE CLICK EFFECT ===== */
 .dropdown-menu li a:active {
   transform: scale(0.98);
 }
 
-/* ===== SMOOTH BORDER SEPARATION ===== */
 .dropdown-menu li:not(:last-child) a {
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
+
 /* PAGE TITLE */
 .page-title {
   text-align: center;
@@ -151,6 +147,7 @@ body {
   gap: 25px;
   flex-wrap: wrap;
   padding: 20px;
+  max-width: 100%;
 }
 
 /* CARD */
@@ -168,7 +165,7 @@ body {
   transform: translateY(-8px);
 }
 
-/* OPTIONAL IMAGE INSIDE CARD */
+/* IMAGE */
 .card img {
   width: 100%;
   height: 150px;
@@ -186,4 +183,25 @@ body {
 .card p {
   font-size: 14px;
   color: #555;
+}
+
+/* GLOBAL IMAGE SAFETY */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
 }
