@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Historical Places</title>
+  <link rel="stylesheet" href="tourism.css">
+  
+</head>
+
+  <header>
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo-container" onclick="goHome()">
+      <img src="images/logo.jpg" alt="logo">
+      <span>Amaravathi</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+
+      <li><a href="jobs.html">Jobs</a></li>
+
+      <li><a href="services.html">Client Services</a></li>
+
+      <li><a href="events.html">Events</a></li>
+
+      <!-- TOURISM DROPDOWN -->
+       <li class="dropdown">
+  <a href="#" onclick="toggleDropdown(event)">Tourism ▾</a>
+  <ul class="dropdown-menu" id="dropdownMenu">
+    <li><a href="devotional.html" onclick="closeDropdown()">Devotional</a></li>
+    <li><a href="historical.html" onclick="closeDropdown()">Historical</a></li>
+    <li><a href="spiritual.html" onclick="closeDropdown()">Spiritual</a></li>
+    <li><a href="nature.html" onclick="closeDropdown()">Nature & Relaxation</a></li>
+    <li><a href="city.html" onclick="closeDropdown()">City Attraction</a></li>
+  </ul>
+</li>
+
+      <li><a href="index.html#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+<!-- SCRIPT FOR LOGO CLICK -->
+<body>
+
+<h1 class="page-title">Historical/Heritage Places</h1>
+
+<div class="cards">
+
+  <!-- Amaravathi Stupa -->
+  <div class="card">
+    <img src="images/Stupa.jpg" alt="Amaravathi Stupam">
+
+    <h3>Amaravathi Stupam</h3>
+
+    <p class="note">Free/offline Darshan Tickets/p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/AFmAjWHAZg8wyE8i6" target="_blank">Directions</a>
+    </div>
+  </div>
+
+  <!-- Undavalli Caves -->
+  <div class="card">
+    <img src="images/caves.jpg" alt="Undavalli Caves">
+
+    <h3>Undavalli Caves</h3>
+
+    <p class="note">Offline Tickets for Entry</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/BFE4ucf93SRjR4gz9" target="_blank">Directions</a>
+    </div>
+  </div>
+
+  <!-- Kondapalli Fort -->
+  <div class="card">
+    <img src="images/fort.jpg" alt="Kondapalli Fort">
+
+    <h3>Kondapalli Fort</h3>
+
+    <p class="note">Offline/Free Entry available</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/NFSHsiNkKt4CyvKE8" target="_blank">Directions</a>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
