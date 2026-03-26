@@ -359,7 +359,7 @@ footer {
 }
 
 /* MOBILE NAV */
-@media (max-width: 2000px) {
+@media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
@@ -403,6 +403,10 @@ footer {
     display: block;
   }
 
+  .dropdown-menu li a {
+    color: white;
+  }
+}
   .dropdown-menu li a {
     color: white;
   }
