@@ -71,3 +71,14 @@ function showClients(service) {
     clientsDiv.innerHTML = output;
   }
 }
+
+// MOBILE MENU TOGGLE
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// CLOSE MENU AFTER CLICK
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("active");
+  closeDropdown();
+}
