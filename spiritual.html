@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spiritual Places</title>
+  <link rel="stylesheet" href="tourism.css">
+  
+</head>
+
+  <header>
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo-container" onclick="goHome()">
+      <img src="images/logo.jpg" alt="logo">
+      <span>Amaravathi</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+
+      <li><a href="jobs.html">Jobs</a></li>
+
+      <li><a href="services.html">Client Services</a></li>
+
+      <li><a href="events.html">Events</a></li>
+
+      <!-- TOURISM DROPDOWN -->
+       <li class="dropdown">
+  <a href="#" onclick="toggleDropdown(event)">Tourism ▾</a>
+  <ul class="dropdown-menu" id="dropdownMenu">
+    <li><a href="devotional.html" onclick="closeDropdown()">Devotional</a></li>
+    <li><a href="historical.html" onclick="closeDropdown()">Historical</a></li>
+    <li><a href="spiritual.html" onclick="closeDropdown()">Spiritual</a></li>
+    <li><a href="nature.html" onclick="closeDropdown()">Nature & Relaxation</a></li>
+    <li><a href="city.html" onclick="closeDropdown()">City Attraction</a></li>
+  </ul>
+</li>
+
+      <li><a href="index.html#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+<!-- SCRIPT FOR LOGO CLICK -->
+<body>
+
+<h1 class="page-title">Spritual/Cultural (Non-Religious) Places</h1>
+
+<div class="cards">
+
+  <!-- Dhyana Buddha Statue -->
+  <div class="card">
+    <img src="images/buddha.jpg" alt="Dhyana Buddha Statue">
+
+    <h3>Dhyana Buddha Statue</h3>
+
+    <p class="note">Free/offline Entry Tickets</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/CiDiK8HdF8uvzYUX8" target="_blank">Directions</a>
+    </div>
+  </div>
+
+  <!-- Amaravathi Archaeological Museum -->
+  <div class="card">
+    <img src="images/aam.jpg" alt="Amaravathi Archaeological Museum">
+
+    <h3>Amaravathi Archaeological Museum</h3>
+
+    <p class="note">Offline/Free Tickets for Entry</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/ZDL2AjpcrxmaATrW8" target="_blank">Directions</a>
+    </div>
+  </div>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
