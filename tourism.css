@@ -150,11 +150,11 @@ body {
   max-width: 100%;
 }
 .card {
-  width: 300px;
+  width: 250px;
+  background: white;
   border-radius: 12px;
-  overflow: hidden;
+  padding: 20px;
   text-align: center;
-  background: #fff;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
