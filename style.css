@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -7,27 +7,21 @@
 
 html, body {
   overflow-x: hidden;
-}
-
-/* BODY */
-body {
   font-family: 'Segoe UI', sans-serif;
   background: #f9fafb;
   color: #333;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background: transparent;
   position: absolute;
   width: 100%;
   top: 0;
-  left: 0;
   z-index: 10;
 }
 
@@ -35,7 +29,7 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
 }
 
@@ -63,15 +57,15 @@ body {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover {
-  transform: scale(1.1);
   color: #facc15;
+  transform: scale(1.08);
 }
 
-/* DROPDOWN */
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
 }
@@ -84,14 +78,14 @@ body {
   padding: 10px 0;
   list-style: none;
   background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: 0.25s;
+  transition: 0.25s ease;
 }
 
 .dropdown-menu.show {
@@ -105,15 +99,17 @@ body {
   padding: 12px 20px;
   color: #0A1F44;
   text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
 }
 
 .dropdown-menu li a:hover {
   background: #facc15;
-  transform: scale(1.05);
+  color: black;
   padding-left: 25px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
   background: url('images/hero.jpg') center/cover no-repeat;
@@ -123,6 +119,7 @@ body {
   text-align: center;
   color: white;
   position: relative;
+  padding: 0 20px;
 }
 
 .hero::after {
@@ -140,34 +137,71 @@ body {
 
 .hero h2 {
   font-size: 52px;
+  font-weight: 700;
 }
 
 .hero p {
+  font-size: 18px;
   margin-top: 10px;
+  max-width: 600px;
 }
 
-/* SECTIONS */
+/* ================= SCROLL BAR ================= */
+.scrolling {
+  background: #ffd54f;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.scroll-track {
+  display: inline-block;
+  animation: scrollSmooth 20s linear infinite;
+}
+
+.scroll-track span {
+  padding-right: 50px;
+  font-weight: 500;
+}
+
+@keyframes scrollSmooth {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ================= SECTIONS ================= */
 .section {
-  padding: 40px;
+  padding: 60px 40px;
   text-align: center;
 }
 
-/* CARDS */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ================= CARDS ================= */
 .cards,
 .service-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .card,
 .service-card {
-  background: white;
-  border-radius: 10px;
   width: 280px;
+  background: white;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover,
+.service-card:hover {
+  transform: translateY(-8px);
 }
 
 .service-card img {
@@ -176,31 +210,78 @@ body {
   object-fit: cover;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about {
-  padding: 50px;
+  padding: 60px 40px;
   background: #eef2f7;
 }
 
-/* FOOTER */
+.about p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* CONTACT ICONS */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.icon-btn {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0A1F44;
+  font-size: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  background: #facc15;
+  transform: scale(1.15);
+}
+
+/* ================= FOOTER ================= */
 footer {
   background: #1f2937;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
 }
 
-/* HAMBURGER */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #facc15;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ================= HAMBURGER ================= */
 .menu-toggle {
   display: none;
   font-size: 26px;
-  cursor: pointer;
   color: white;
+  cursor: pointer;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+  /* NAVBAR */
   .menu-toggle {
     display: block;
   }
@@ -222,16 +303,8 @@ footer {
     display: flex;
   }
 
-  /* FIXED: CARDS STACK PROPERLY */
-  .cards,
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card,
-  .service-card {
-    width: 90%;
+  .nav-links a {
+    font-size: 18px;
   }
 
   /* DROPDOWN MOBILE */
@@ -253,7 +326,7 @@ footer {
     color: white;
   }
 
-  /* HERO TEXT */
+  /* HERO */
   .hero h2 {
     font-size: 30px;
   }
@@ -261,4 +334,22 @@ footer {
   .hero p {
     font-size: 14px;
   }
+
+  /* CARDS */
+  .cards,
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .service-card {
+    width: 90%;
+  }
+
+  /* CONTACT */
+  .contact-icons {
+    justify-content: center;
+  }
+
 }
