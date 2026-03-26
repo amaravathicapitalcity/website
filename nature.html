@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nature & Relaxation</title>
+  <link rel="stylesheet" href="tourism.css">
+  
+</head>
+
+  <header>
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo-container" onclick="goHome()">
+      <img src="images/logo.jpg" alt="logo">
+      <span>Amaravathi</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="nav-links">
+
+      <li><a href="jobs.html">Jobs</a></li>
+
+      <li><a href="services.html">Client Services</a></li>
+
+      <li><a href="events.html">Events</a></li>
+
+      <!-- TOURISM DROPDOWN -->
+       <li class="dropdown">
+  <a href="#" onclick="toggleDropdown(event)">Tourism ▾</a>
+  <ul class="dropdown-menu" id="dropdownMenu">
+    <li><a href="devotional.html" onclick="closeDropdown()">Devotional</a></li>
+    <li><a href="historical.html" onclick="closeDropdown()">Historical</a></li>
+    <li><a href="spiritual.html" onclick="closeDropdown()">Spiritual</a></li>
+    <li><a href="nature.html" onclick="closeDropdown()">Nature & Relaxation</a></li>
+    <li><a href="city.html" onclick="closeDropdown()">City Attraction</a></li>
+  </ul>
+</li>
+
+      <li><a href="index.html#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+<!-- SCRIPT FOR LOGO CLICK -->
+<body>
+
+<h1 class="page-title">Nature & Relaxation Places</h1>
+
+<div class="cards">
+
+  <!-- Krishna River Bank -->
+  <div class="card">
+    <img src="images/krishna.jpg" alt="Dhyana Buddha Statue">
+
+    <h3>Krishna River Banks</h3>
+
+    <p class="note">Free Entry | A River veiw Gallery with Food courts</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/9nSZUhVwsvyQKLCG8" target="_blank">Directions</a>
+    </div>
+  </div>
+
+  <!-- Bhavani Island -->
+  <div class="card">
+    <img src="images/island.jpg" alt="Bhavani Island">
+
+    <h3>Bhavani Island</h3>
+
+    <p class="note">Offline Tickets for Entry</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/DrHpRSfGi6qYmuVk6" target="_blank">Directions</a>
+    </div>
+  </div>
+ 
+  <!-- Kondapalli Reserve Forest -->
+  <div class="card">
+    <img src="images/forest.jpg" alt="Kondapalli Reserve Forest">
+
+    <h3>Kondapalli Reserve Forest</h3>
+
+    <p class="note">Offline Tickets for Entry</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/YpCPTYUVWaaVUxm76" target="_blank">Directions for forest</a>
+      <a href="https://maps.app.goo.gl/xqRgFkWiEtkGzBjn7" target="_blank">Directions for trekking</a>
+    </div>
+  </div>
+
+  <!-- Mangalagiri Park -->
+  <div class="card">
+    <img src="images/park.jpg" alt="Mangalagiri Eco Park">
+
+    <h3>Mangalagiri Eco Park</h3>
+
+    <p class="note">Offline Tickets for Entry</p>
+
+    <div class="card-buttons">
+      <a href="https://https://maps.app.goo.gl/4jxq6Fen8gpDsy5j6" target="_blank">Directions</a>
+    </div>
+  </div>
+
+  <!-- MSR Arogya Nilayam -->
+  <div class="card">
+    <img src="images/manthena.jpg" alt="MSR Arogya Nilayam">
+
+    <h3>Manthena Satyanarana Arogya Nilaya</h3>
+
+    <p class="note">Free Entry | Other Expenses Applicable</p>
+
+    <div class="card-buttons">
+      <a href="https://maps.app.goo.gl/ZAZ4GUhH29XywCc27" target="_blank">Directions</a>
+    </div>
+  </div>
+  
+</div>
+<script src="script.js"></script>
+</body>
+</html>
