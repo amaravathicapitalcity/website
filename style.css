@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 /* BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
