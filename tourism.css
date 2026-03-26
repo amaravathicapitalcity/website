@@ -141,6 +141,12 @@ body {
 }
 
 /* CARDS SECTION */
+.cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 30px;
+}
 .card {
   width: 300px;
   border-radius: 12px;
