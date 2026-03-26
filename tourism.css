@@ -143,9 +143,11 @@ body {
 /* CARDS SECTION */
 .cards {
   display: flex;
-  gap: 25px;
   justify-content: center;
-  margin-top: 30px;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 20px;
+  max-width: 100%;
 }
 .card {
   width: 300px;
